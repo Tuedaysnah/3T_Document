@@ -15,19 +15,34 @@
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
+            font-family: Arial, sans-serif;
         }
         .container {
-            width: 40vw; /* 9:16 aspect ratio for a vertical orientation */
-            height: 71.1vh; /* 16/9 * 40vw to maintain aspect ratio */
+            width: 90%;
+            max-width: 600px;
             background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             overflow-y: auto;
             box-sizing: border-box;
             border-radius: 10px;
+            margin: 10px;
         }
         p, ul {
             margin: 0 0 1em;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        @media (min-aspect-ratio: 9/16) {
+            .container {
+                height: 80vh; /* Adjust height to fit the aspect ratio */
+            }
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
         }
     </style>
 </head>
